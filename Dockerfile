@@ -5,6 +5,7 @@ RUN conda config --add channels bioconda
 
 RUN conda install git cnv_facets libgomp
 RUN conda update --all
+RUN ln -s /opt/conda/lib/libcrypto.so.1.1 /opt/conda/lib/libcrypto.so.1.0.0
 
 WORKDIR /opt/
 RUN git clone https://github.com/mskcc/facets.git
